@@ -9,14 +9,9 @@ app.use(cors())
 app.use(express.json())
 
 // MongoDB Connection
-mongoose.connect("mongodb://127.0.0.1:27017/germanCourse")
-.then(()=>{
-console.log("MongoDB connected successfully")
-})
-.catch((err)=>{
-console.log("MongoDB connection error:", err)
-})
-
+mongoose.connect("mongodb+srv://souravgusain832_db_user:Drugp%40ytm1@cluster0.1240cgu.mongodb.net/germanCourse")
+.then(()=>console.log("MongoDB connected"))
+.catch(err=>console.log(err))
 // Student Schema
 const studentSchema = new mongoose.Schema({
 name:String,
