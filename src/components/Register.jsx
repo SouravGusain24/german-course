@@ -19,12 +19,12 @@ setForm({...form,[e.target.name]:e.target.value})
 const handleSubmit = async (e)=>{
 e.preventDefault()
 
-await fetch("http://localhost:5001/register",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body: JSON.stringify(form)
+await fetch("https://german-course.onrender.com/register",{
+  method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body: JSON.stringify(form)
 })
 
 alert("Registered Successfully")
